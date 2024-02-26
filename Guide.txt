@@ -11,4 +11,4 @@ Version2: This is a combined version of version1.
 It contains only two files: singleFile.py and singleFile.bat.
 I recommend using this version if you trust my abilities 🤣.
 
-Translated with www.DeepL.com/Translator (free version)
+Result: When the script finishes running, Residential(number of elements).json and Condo(number of elements).json are created as you want.
