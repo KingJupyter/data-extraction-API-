@@ -1,0 +1,14 @@
+Before using this script, please read the PDF file "Washington DC Data.pdf" carefully to make sure you understand all the requirements.
+
+This script is a web scraping script created using Python.
+There are two versions in this folder: Distributed file(version 1) and SingleFile(version 2).
+The results of both versions are the same, so you can use either version.
+
+Version1: In this version, the script is divided into folders by steps.
+So you can check all the steps through these folders.
+
+Version2: This is a combined version of version1.
+It contains only two files: singleFile.py and singleFile.bat.
+I recommend using this version if you trust my abilities 🤣.
+
+Translated with www.DeepL.com/Translator (free version)

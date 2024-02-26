@@ -2,13 +2,12 @@ import multiprocessing
 import subprocess
 from time import sleep
 import sys
-sys.path.append('API')
-sys.path.append('extract1To3')
-sys.path.append('extractAddress')
-from extract1To3 import extract1_1To3
-from extract1To3 import extract1_2To3
-from extractAddress import extractAddress_1
-from extractAddress import extractAddress_2
+sys.path.append('extract1To3_step3')
+sys.path.append('extractAddress_step4_5')
+from extract1To3_step3 import extract1_1To3
+from extract1To3_step3 import extract1_2To3
+from extractAddress_step4_5 import extractAddress_1
+from extractAddress_step4_5 import extractAddress_2
 import os
 
 def multiRunScript(script_name):
@@ -18,7 +17,7 @@ def main():
     decision = input('Do you want to delete other files? Please input "yes" or "no" : ')
     # Step1. Take SSL from Computer Assisted Mass Appraisal pages such as Residential: https://opendata.dc.gov/datasets/DCGIS::computer-assisted-mass-appraisal-residential/about and Condo: https://opendata.dc.gov/datasets/DCGIS::computer-assisted-mass-appraisal-condominium/about
     # Step2. Save Attributes (See below) in JSON format
-    step1_scripts = ["./API/api_step1_1.py", "./API/api_step1_2.py", "./API/api_step3.py", "./API/api_step4.py"]
+    step1_scripts = ["./API_step1_2/api_step1_1.py", "./API_step1_2/api_step1_2.py", "./API_step1_2/api_step3.py", "./API_step1_2/api_step4.py"]
     step1_processes = []
     for script in step1_scripts:
         step1_process = multiprocessing.Process(target = multiRunScript, args = (script,))
@@ -40,7 +39,7 @@ def main():
     sleep(3)
 
     # Step5. Add the Street Address to the JSON.
-    step5_scripts = ["./extractAddress/addAddress_1.py", "./extractAddress/addAddress_2.py"]
+    step5_scripts = ["./extractAddress_step4_5/addAddress_1.py", "./extractAddress_step4_5/addAddress_2.py"]
     step5_processes = []
     for script in step5_scripts:
         step5_process = multiprocessing.Process(target = multiRunScript, args = (script,))
